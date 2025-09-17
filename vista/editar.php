@@ -15,6 +15,25 @@
     </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Editar Producto</h2>
+        <form action="index.php?accion=editar" method="post">
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($producto['id']); ?>">
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($producto['nombre']); ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock disponible:</label>
+                <input type="number" id="stock" name="stock" value="<?php echo htmlspecialchars($producto['stock']); ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" step="0.01" id="precio" name="precio" value="<?php echo htmlspecialchars($producto['precio']); ?>" required>
+            </div>
+            <input type="submit" value="Actualizar Producto" class="btn-submit">
+        </form>
+        <a href="index.php" class="link-volver">Volver a la lista</a>
+    </div>
 </body>
-</html> 
+</html>
