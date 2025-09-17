@@ -20,7 +20,7 @@ class Producto {
         return $stmt->fetch();
     }
 
-    public function registrar($nombre, $stock, $precio) {
+       public function registrar($nombre, $stock, $precio) {
         $sql = "INSERT INTO productos (nombre, stock, precio) VALUES (?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([$nombre, $stock, $precio]);
