@@ -17,16 +17,6 @@
             overflow: hidden;
         }
 
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('imagenes/Whisk_duzm2q5odm.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px); /* Difuminado */
-            z-index: -1;
-        }
 
         /* Caja principal */
         .container {
