@@ -2,21 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Productos</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 900px; margin: 20px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #0056b3; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #007bff; color: white; }
-        tr:nth-child(even) { background-color: #f2f2f2; }
-        a { text-decoration: none; }
-        .btn { padding: 5px 10px; border-radius: 4px; color: white; }
-        .btn-registrar { display: inline-block; margin-bottom: 20px; background-color: #28a745; padding: 10px 15px; }
-        .btn-editar { background-color: #ffc107; }
-        .btn-eliminar { background-color: #dc3545; }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -47,6 +34,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
+    </div>    
 </body>
 </html>
