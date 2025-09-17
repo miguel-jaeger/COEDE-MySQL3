@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <title>Editar Producto</title>
     <style>
-        /* Fondo con imagen difuminada */
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* Centrado horizontal */
-            align-items: center;    /* Centrado vertical */
-            position: relative;
-            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            background-image: url('imagenes/Whisk_duzm2q5odm.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
-
-
-        /* Caja principal */
         .container {
             width: 95%;
             max-width: 500px;
@@ -35,23 +32,14 @@
             margin-bottom: 20px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; }
 
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        input[type=text],
-        input[type=number] {
+        input[type=text], input[type=number] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 6px;
-            box-sizing: border-box;
             font-size: 15px;
         }
 
@@ -67,9 +55,7 @@
             margin-top: 10px;
         }
 
-        .btn-submit:hover {
-            background-color: #0056b3;
-        }
+        .btn-submit:hover { background-color: #0056b3; }
 
         .link-volver {
             display: block;
@@ -80,9 +66,7 @@
             font-weight: bold;
         }
 
-        .link-volver:hover {
-            text-decoration: underline;
-        }
+        .link-volver:hover { text-decoration: underline; }
     </style>
 </head>
 <body>

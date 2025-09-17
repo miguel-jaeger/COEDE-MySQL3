@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <title>Registrar Producto</title>
     <style>
-        /* Fondo con imagen y difuminado */
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* Centrado horizontal */
-            align-items: center;    /* Centrado vertical */
-            position: relative;
-            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            background-image: url('imagenes/Whisk_duzm2q5odm.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
-
-        /* Caja del formulario */
         .container {
-            width: 100%;
+            width: 95%;
             max-width: 500px;
             padding: 25px;
-            background-color: rgba(255, 255, 255, 0.9); /* Blanco semitransparente */
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 15px rgba(0,0,0,0.4);
             border-radius: 10px;
         }
 
         h2 {
             text-align: center;
+            color: #28a745;
             margin-bottom: 20px;
         }
 
         .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; }
+
         input[type=text], input[type=number] {
-            width: 100%; padding: 10px;
-            border: 1px solid #ccc; border-radius: 4px;
-            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
         }
 
         .btn-submit {
@@ -47,17 +49,24 @@
             color: white;
             padding: 12px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 10px;
         }
+
         .btn-submit:hover { background-color: #218838; }
 
         .link-volver {
             display: block;
             margin-top: 15px;
             text-align: center;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
         }
+
+        .link-volver:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -78,7 +87,7 @@
             </div>
             <input type="submit" value="Registrar Producto" class="btn-submit">
         </form>
-        <a href="index.php" class="link-volver">Volver a la lista</a>
+        <a href="index.php" class="link-volver">⬅ Volver a la lista</a>
     </div>
 </body>
 </html>
