@@ -1,0 +1,16 @@
+Problemas:
+. El color amarillo no es adecuado para el botón de agregar
+
+
+Commits:
+2lead7(14)
+lazocom(7)
+juanroldanmgp-cpu(6)
+josemavm98(3)
+
+
+
+
+
+
+
