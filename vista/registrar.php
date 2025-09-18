@@ -70,7 +70,9 @@
     </style>
 </head>
 <body>
+ 
     <div class="container">
+      
         <h2>Registrar Nuevo Producto</h2>
         <form action="index.php?accion=registrar" method="post">
             <div class="form-group">

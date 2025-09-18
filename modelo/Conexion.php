@@ -1,10 +1,12 @@
 <?php
+// Este archivo debe ser el primer script que se ejecute.
+// No debe haber nada antes de la etiqueta <?php
 class Conexion {
     public static function conectar() {
         $host = "localhost";
         $db   = "gestion_productos";
         $user = "root";
-        $pass = ""; // Cambia esto por tu contraseña de MySQL si tienes una
+        $pass = "";
         $charset = 'utf8mb4';
 
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -15,12 +17,16 @@ class Conexion {
         ];
 
         try {
-             $pdo = new PDO($dsn, $user, $pass, $options);
-             return $pdo;
+            $pdo = new PDO($dsn, $user, $pass, $options);
+            return $pdo;
         } catch (\PDOException $e) {
-             // En un entorno de producción, no mostrarías el error detallado.
-             throw new \PDOException($e->getMessage(), (int)$e->getCode());
+            // Se puede agregar un log del error para depuración
+            // error_log($e->getMessage()); 
+            
+            // Redirección en caso de error
+            // Se debe colocar un exit() o die() después para detener la ejecución del script
+            header("Location: index.php?error=1");
+            exit(); 
         }
     }
 }
-?>

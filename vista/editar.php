@@ -45,7 +45,7 @@
 
         .btn-submit {
             width: 100%;
-            background-color: #007bff;
+            background-color: #28a745;
             color: white;
             padding: 12px;
             border: none;
@@ -55,7 +55,7 @@
             margin-top: 10px;
         }
 
-        .btn-submit:hover { background-color: #0056b3; }
+        .btn-submit:hover { background-color: #218838; }
 
         .link-volver {
             display: block;

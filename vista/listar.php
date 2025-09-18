@@ -47,12 +47,19 @@
 
         .btn { padding: 6px 12px; border-radius: 4px; color: white; font-size: 14px; }
         .btn-registrar { display: inline-block; margin-bottom: 20px; background-color: #28a745; padding: 10px 15px; }
-        .btn-editar { background-color: #ffc107; }
+        .btn-editar { background-color: #070bffff; }
         .btn-eliminar { background-color: #dc3545; }
+        .error{color:red;}
     </style>
 </head>
 <body>
     <div class="container">
+             <div class="error">
+        <?php if(isset($_GET['error'])&&$_GET['error']==1) { ?>
+ Nombre Duplicado
+       <?php }?>
+            
+        </div>
         <h1>Gestión de Productos</h1>
         <a href="index.php?accion=registrar" class="btn btn-registrar">Registrar Nuevo Producto</a>
         <table>

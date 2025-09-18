@@ -1,24 +1,27 @@
 <?php
+
+//Controlador: Este archivo, que recibe la petición, valida datos, llama al modelo y carga la vista adecuada.
+//Este controlador gestiona las operaciones básicas de un CRUD (Crear, Leer, Actualizar, Eliminar) para productos usando un patrón MVC:
+
 // La ruta __DIR__ . '/../modelo/Modelo.php' sube un nivel desde /controlador para encontrar /modelo.
-require_once __DIR__ . '/../modelo/Modelo.php';
+require_once __DIR__ . '/../modelo/Modelo.php'; //importa el archivo del modelo, que contiene la clase Producto
 
 class ProductoController {
     private $modelo;
 
     public function __construct() {
-        $this->modelo = new Producto();
+        $this->modelo = new Producto(); //crea un objeto de la clase Producto
     }
 
     // Acción por defecto: muestra la lista de productos
     public function index() {
-        $productos = $this->modelo->listar();
+        $productos = $this->modelo->listar(); //Llama al modelo para obtener todos los productos
         // Carga la vista de listar y le pasa los datos
-        require_once __DIR__ . '/../vista/listar.php';
+        require_once __DIR__ . '/../vista/listar.php'; // carga la vista listar.php pasando los datos $productos.
     }
 
     // Muestra el formulario de registro o procesa el registro
-    public function registrar() {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    public function registrar() { //Recoge datos del formulario
             // Validaciones básicas (pueden ser más complejas)
             $nombre = trim($_POST['nombre']);
             $stock = filter_var($_POST['stock'], FILTER_VALIDATE_INT);
@@ -56,8 +59,8 @@ class ProductoController {
         }
     }
 
-    // Procesa la eliminación de un producto
-    public function eliminar() {
+        // Procesa la eliminación de un producto
+    public function eliminar() {                            
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $this->modelo->eliminar($id);
@@ -67,3 +70,4 @@ class ProductoController {
     }
 }
 ?>
+
