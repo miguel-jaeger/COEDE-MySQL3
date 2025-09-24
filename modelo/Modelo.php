@@ -58,7 +58,7 @@ class Producto {
          try {
             // Prepare and execute the statement
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$nombre, $cantidad, $precio,$id]);
+            $stmt->execute([$nombre, $stock, $precio,$id]);
             
             // Redirect on success (optional, but good practice)
             header("Location: index.php?success=1");

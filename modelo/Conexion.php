@@ -4,9 +4,9 @@
 class Conexion {
     public static function conectar() {
         $host = "localhost";
-        $db   = "gestion_productos";
+        $db   = "db_gestion_productos";
         $user = "root";
-        $pass = "";
+        $pass = "root";
         $charset = 'utf8mb4';
 
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

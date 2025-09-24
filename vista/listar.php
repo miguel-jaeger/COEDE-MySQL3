@@ -75,9 +75,9 @@
             <tbody>
                 <?php foreach ($productos as $producto): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($producto['id']); ?></td>
-                    <td><?php echo htmlspecialchars($producto['nombre']); ?></td>
-                    <td><?php echo htmlspecialchars($producto['stock']); ?></td>
+                    <td><?php echo ($producto['id']); ?></td>
+                    <td><?php echo ($producto['nombre']); ?></td>
+                    <td><?php echo ($producto['stock']); ?></td>
                     <td>S/ <?php echo number_format($producto['precio'], 2); ?></td>
                     <td>
                         <a href="index.php?accion=editar&id=<?php echo $producto['id']; ?>" class="btn btn-editar">Editar</a>
